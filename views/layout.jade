@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport",content="width=device-width, initial-scale=1")
+    meta(name="description",content="")
+    meta(name="author",content="")
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/readable/bootstrap.min.css")
+  body
+    block content
+  footer.footer
+    .navbar.navbar-fixed-bottom
+      p.text-muted @ 2015 Avinash Baldeo
+    block scripts
+      script(type='text/javascript', src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+      script(type='text/javascript', src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")

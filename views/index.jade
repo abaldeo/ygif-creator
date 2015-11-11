@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .container(id='creator')
+    h1(class='text-center')= title
+    .well.bs-component
+      form(class='form-horizontal', id='convert', method='post')
+        .form-group
+          label(class='col-md-2 control-label' for='inputVideoURL') Youtube URL
+          .col-md-8
+            input.form-control(type='url',id='inputVideoURL',name='videoURL',placeholder='Enter Youtube Video URL')
+        .form-group
+          label(class='col-md-2 control-label' for='inputStartTime') Start Time
+          .col-md-8
+            input.form-control(type='text',id='inputStartTime',name='startTime',placeholder='Enter Start Time..hh:mm:ss')
+        .form-group
+          label(class='col-md-2 control-label' for='selectDuration') Duration
+          .col-md-8
+            select.form-control(,id='selectDuration',name='duration')
+              option(value="" selected disabled) Please Select
+              -for(var i = 1;i<=20;i++){
+              option(value="#{i}") #{i}
+              -}
+        .form-group
+          .col-md-4.col-md-offset-5
+            button.btn.btn-primary(type='submit') Convert to Gif!
+  .container(id='gif-gallery')
+    .row(id='react-row')
+block append scripts
+  //script(type='text/javascript', src="https://cdn.socket.io/socket.io-1.3.7.js")
+  script(type='text/javascript', src="/js/bundle.js")
+
